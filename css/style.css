@@ -1,0 +1,851 @@
+
+/* Fonts style */
+
+@font-face {
+    font-family:'Gotham Rounded Book';
+    src: url('../fonts/GothamRounded-Book.eot');
+    src: url('../fonts/GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamRounded-Book.woff2') format('woff2'),
+        url('../fonts/GothamRounded-Book.woff') format('woff'),
+        url('../fonts/GothamRounded-Book.ttf') format('truetype'),
+        url('../fonts/GothamRounded-Book.otf') format('opentype'),
+        url('../fonts/GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family:'Gotham Rounded Bold';
+    src: url('../fonts/GothamRounded-Bold.eot');
+    src: url('../fonts/GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamRounded-Bold.woff2') format('woff2'),
+        url('../fonts/GothamRounded-Bold.woff') format('woff'),
+        url('../fonts/GothamRounded-Bold.ttf') format('truetype'),
+        url('../fonts/GothamRounded-Bold.otf') format('opentype'),
+        url('../fonts/GothamRounded-Bold.svg#GothamRounded-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Gotham HTF Book';
+    src: url('../fonts/GothamHTF-Book.eot');
+    src: url('../fonts/GothamHTF-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamHTF-Book.woff') format('woff'),
+        url('../fonts/GothamHTF-Book.ttf') format('truetype'),
+        url('../fonts/GothamHTF-Book.svg#GothamHTF-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham HTF Medium';
+    src: url('../fonts/GothamHTF-Medium.eot');
+    src: url('../fonts/GothamHTF-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamHTF-Medium.woff') format('woff'),
+        url('../fonts/GothamHTF-Medium.ttf') format('truetype'),
+        url('../fonts/GothamHTF-Medium.svg#GothamHTF-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham HTF Bold';
+    src: url('../fonts/GothamHTF-Bold.eot');
+    src: url('../fonts/GothamHTF-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamHTF-Bold.woff') format('woff'),
+        url('../fonts/GothamHTF-Bold.ttf') format('truetype'),
+        url('../fonts/GothamHTF-Bold.svg#GothamHTF-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* // End Fonts style */
+
+
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{ 
+    list-style: none;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{
+    border:0;
+}
+a,input,select,textarea{
+    outline:none;
+}
+input::-moz-focus-inner{
+    border:0; padding: 0;
+}
+
+img{
+    float: left;
+}
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block; color: #283583;}
+/*a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}*/
+
+
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: url(../images/body-bg.jpg) no-repeat center top; background-size: cover; color: #283583; -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:auto; font-family:'Gotham Rounded Book'; font-weight: 400; font-size: 14px; line-height: 20px;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+header,section,footer,.main-wrap{float: left; width: 100%;}
+.common-wrap{max-width: 1200px; margin: 0 auto; clear: both; position: relative;}
+
+h2,h3,h4,h5,h6{font-size: 27px; line-height: 33px; font-weight: 400;}
+h3{font-size: 25px;}
+h4{font-size: 24px; line-height: 28px;}
+h5{font-size: 22px; line-height: 26px;}
+h6{font-size: 18px; line-height: 22px;}
+
+section h2{text-align: center; padding-top: 35px;}
+.main-wrap{overflow: hidden; position: relative;}
+.hearder-star{position: absolute; right: -26px; top: 12px; z-index: -99;}
+
+.logo-wrap{float: left; width: 100%; position: relative;}
+.logo{float: left; max-width: 214px; width: 100%; padding-top: 35px;}
+.logo img{width: 100%;}
+
+.header-right{float: right; max-width: 351px; width: 100%; top: -35px; position: absolute; right: 0;}
+.social-icon-wrap{float: left; width: 171px;}
+.social-icon-wrap a{display: inline-block; width: 37px; margin: 0 .7px;}
+.search-box-area{float: left; width: 166px; margin-left: 14px;}
+.search-box-area input[type="text"]{float: left; width: 100%; height: 34px; background: #eeeeee; border-radius: 7px; font-size: 12px; line-height: 18px; font-family: 'Gotham HTF Book'; font-weight: normal; text-align: center; border: 0; color: #283583;}
+
+.main-nav{float: left; width: 100%; padding-top: 20px; position: relative;}
+.main-nav ul{float: left; width: 100%;}
+.main-nav ul li{float: left; margin: 0 28.8px;}
+.safari .main-nav ul li{margin: 0 29px;}
+.main-nav ul li:first-child{margin-left: 0;}
+.main-nav ul li:last-child{margin-right: 0; float: right;}
+.main-nav ul li a{text-transform: uppercase; padding: 25px 0 32px; position: relative; z-index: 9;}
+.main-nav ul li a:before{visibility: hidden; height: 1px; bottom: -1px; display: block; font-family:'Gotham Rounded Bold'; font-weight: 700; content: attr(title); opacity: 0;}
+.main-nav ul li a:hover,.main-nav ul li.current-menu-item a,.main-nav ul li.current-menu-item li a:hover{font-family:'Gotham Rounded Bold'; font-weight: 700;}
+.main-nav ul li.current-menu-item li a{font-family:'Gotham Rounded Book'; font-weight: normal;}
+.main-nav ul li.hasSubnav a:after,.main-nav ul li a:after{position: absolute; left: 50%; margin-left: -6.5px; bottom: -9px; width: 13px; height: 9px; background: url(../images/dropdown-arrow-down.png) no-repeat 0 0; content: ""; opacity: 0;}
+.main-nav ul li.current-menu-item a:after,.main-nav ul li a:hover:after{bottom: 20px; opacity: 1;}
+
+.dropdown-item-wrap{float: left; width: 100%; position: absolute; left: -999999px; right: 0; top: 98px; background: rgba(255, 254, 236, 0.92); border-top: 1px solid #0047a3; border-bottom: 2px solid #0047a3; padding-bottom: 36px; z-index: 5;}
+.dropdown-item-wrap ul{float: left; width: 23.283333%; margin-left: 2.083333333333333%; padding-top: 33px;}
+.dropdown-item-wrap ul:first-child{margin-left: 0;}
+.dropdown-item-wrap ul:nth-child(2){width: 15.16666666666667%;}
+.dropdown-item-wrap ul li{margin: 0; padding: 15px 0 0; width: 100%;}
+.safari .main-nav ul li .dropdown-item-wrap ul li{margin: 0;}
+.dropdown-item-wrap ul li a{text-transform: inherit; padding: 0;}
+.dropdown-item-wrap ul li a:after{display: none;}
+
+.main-nav ul li:hover .dropdown-item-wrap{left: 0;}
+.main-nav ul li.hasSubnav a:hover:after{opacity: 1; bottom: -9px;}
+
+.phone-nav{position: absolute; right: 15px; top: 15px; width: 23px; display: none;}
+.phone-nav div{float: left; width: 100%; height: 2px; margin: 3px 0; background: #283583;}
+
+
+.main-content-section{padding-left: 25px; padding-right: 25px;}
+/* Slider style */
+.slider-caption,.banner-caption{position: absolute; left: 115px; bottom: 60px; max-width: 280px; text-align: center;}
+.banner-caption{left: 72px; bottom: 52px;}
+.read-more{text-transform: uppercase; margin-top: 40px;}
+.home-slider-wrap .slide{position: relative; float: left; width: 100%;}
+.home-slider-wrap .slide img{width: 100%;}
+
+/* Banner style */
+.banner-wrap{float: left; width: 100%; position: relative;}
+.banner-wrap img{width: 100%;}
+/* Brand section style */
+.brand-item-wrap{float: left; width: 100%;}
+.brand-item{float: left; width: 20%; text-align: center; padding-top: 33px;}
+.brand-item p{float: left; width: 100%;}
+.brand-item figure{max-width: 190px; width: 100%; margin: 0 auto; clear: both; padding-top: 14px;}
+
+.content-star{position: absolute; left: -27px; right: -65px; bottom: 57px; z-index: -99;}
+
+.video-item-wrap{padding-top: 62px;}
+.video-item-wrap,.article-item{float: left; width: 32.08333333333333%; margin: 0 0.9375%; text-align: center;}
+.video-item-wrap:nth-child(3n+1),.article-item:nth-child(3n+1){margin-left: 0;}
+.video-item-wrap:nth-child(3n+3),.article-item:nth-child(3n+3){margin-right: 0;}
+
+.video-wrap{float: left; width: 100%; border-radius: 9px; overflow: hidden; position: relative; padding-top: 10px;}
+.video-wrap img{float: left; width: 100%;}
+.video-wrap a{position: absolute; left: 25px; bottom: 50px; text-transform: uppercase;}
+.video-wrap a img{float: right; margin-left: 8px; width: 6px; height: 9px; margin-top: 5px;}
+
+.signup-newslater{float: left; width: 100%; background: #e0f4fa; padding: 40px 20px 28px; text-align: center; border-radius: 9px; margin-top: 10px;}
+.signup-newslater input[type="text"]{max-width: 180px; width: 100%; height: 34px; background: transparent; border: 0; font-size: 16px; line-height: 20px; color: #283583; font-family: 'Gotham HTF Book'; margin: 35px auto 0; text-align: center;}
+.signup-newslater input[type="submit"]{width: 100px; height: 34px; background: #283583; border: 0; border-radius: 9px; font-size: 15px; line-height: 32px; color: #ffffff; font-family:'Gotham Rounded Bold'; font-weight: 700; margin: 45px auto 0; text-align: center; cursor: pointer;}
+.input-wrap{float: left; width: 100%;}
+
+.popular-article-section{padding-top: 15px;}
+.article-item-wrap,.article-item figure img{float: left; width: 100%;}
+.article-item{padding-top: 20px;}
+.article-item figure{padding-top: 10px;}
+
+/*===============Beginning FAQ Page Style==========================*/
+.faq-content-details{ float: left; width: 100%;padding-top: 48px;}
+.aside-nav{ float: left; width: 300px;margin-top: 30px}
+.tab-contents{ float: left; width: calc(100% - 300px); padding-left: 5px;}
+.aside-nav ul,.faq-subTab{list-style: none; margin: 0; padding: 0;}
+.aside-nav ul{ width: 191px;}
+.aside-nav ul li{float: left;width: 100%; padding: 6px 0; position: relative}
+.aside-nav ul li,.faq-subTab li{ float:left;display: inline-block;}
+.aside-nav ul li:first-child{ padding-top: 0px;}
+.aside-nav ul li a,.faq-subTab li a{ display: inline-block; font-size: 15px; line-height: 20px;  font-family:'Gotham Rounded Book'; font-weight: normal; font-style: normal; color: #283583;position: relative}
+.aside-nav ul li a:hover,.faq-content .aside-nav ul li a:hover,.faq-subTab li a:hover{color: #283583;font-family:'Gotham Rounded Bold'; font-weight: 700;}
+
+.faq-content .aside-nav ul li.active,.faq-content .aside-nav ul li:hover{font-family:'Gotham Rounded Bold'; font-weight: 700; text-transform: uppercase;}
+.aside-nav ul li:before{position: absolute; left: 0; bottom: 2px; content: ''; width: 191px; height: 1px; background: #283583;z-index: 2;opacity: 0}
+.aside-nav ul li.active:before, .aside-nav ul li:hover:before{opacity: 1}
+
+.faq-content .aside-nav ul li:after,.aside-nav ul li a:after,.cream-and-lotion .product-category-nav ul li a:after{font-family:'Gotham Rounded Bold';font-weight: 700; font-style: normal; font-stretch: normal; visibility: hidden; height: 1px; margin-bottom: -1px; content:attr(title); overflow: hidden; display: block;}
+
+.cream-and-lotion .product-category-nav ul li a:hover,.cream-and-oil .product-category-nav ul li.active a,.cream-and-lotion .product-category-nav ul li.active a{font-family:'Gotham Rounded Bold'; font-weight: 400;color: #283583; text-decoration: none;font-weight: 700;}
+
+.faq-subTab{ float: left;width: 100%;margin-top:25px;}
+.faq-subTab li{ margin: 0 0 0 60px; border: none; position: relative; cursor: pointer;}
+.faq-subTab li.active{font-family:'Gotham Rounded Bold'; font-weight: 700;}
+.faq-subTab li:first-child{margin-left: 0px;}
+.faq-subTab li:before{ position: absolute; bottom:-8px; content: ''; width: 9px;margin-left: -4.5px;left: 50%; height: 6px;background: url(../images/arrow-bottom.png) no-repeat center bottom;background-size: contain; z-index: 2; opacity: 0;}
+.faq-subTab li:after{display: block; height: 0; bottom: -1px; overflow: hidden; content: attr(title); visibility: hidden; font-family:'Gotham Rounded Bold'; font-weight: 700;}
+.faq-subTab li:hover{text-transform: capitalize;font-family:'Gotham Rounded Bold'; font-weight: 700;}
+.faq-subTab li:hover:before ,.faq-subTab li:hover,.faq-subTab li.active:before{ opacity: 1;border-bottom:none; text-transform: capitalize}
+.accordion{ float: left; width: 100%;margin-top:27px}
+.question{ float: left; width: 100%; }
+.question h6{ float: left; width: 100%;padding-bottom: 13px; font-size: 18px; line-height: 20px; font-family:'Gotham Rounded Book';color: #283583;background: url(../images/arrow-bottom.png)no-repeat right 12px; cursor: pointer; padding-top: 9px}
+.answer{ float: left; width: 100%; }
+.answer span,.answer p{float: left;padding-top: 20px; width: 100%;font-size: 15px;line-height: 20px;  font-family:'Gotham Rounded Book';color: #283583;  }
+.answer p{ font-size: 14px; padding-top: 19px;padding-bottom: 5px}
+.active.question h6{border-bottom: 1px solid #E5EAE2;background: url(../images/arrow-top.png)no-repeat right 12px; }
+.faq-tab-content{ float: left; width: 100%;}
+.answer span{padding-top: 16px}
+.answer p:nth-child(2){padding-top: 19px}
+/*===============End FAQ Page Style==========================*/
+
+
+/*===============Beginning Contact Page Style==========================*/
+.contact-details-wrap{ float: left; width: 100%;margin-top: 62px;}
+.contact-info-wrap{ float: left; max-width: 587px; width:48.91666666666667%;margin-top: 5px }
+.contact-address-wrap{ float: left; max-width: 562px; width: 46.83333333333333%;margin-left:4.249999999999997%}
+.contact-row{float: left; width: 100%; margin-top: 10px;}
+.contact-row:last-child{float: right; width: calc(100% - 134px); text-align: center;}
+.contact-row label{ float: left; width: 134px;font-size: 15px;line-height: 20px;color: #283583;margin-top: 10px; font-family:'Gotham Rounded Book';}
+.contact-row input[type="text"],.contact-row textarea{ float: left; width:calc(100% - 134px); height: 43px; font-size: 15px; line-height: 22px; border-radius: 10px; background: #F2F2E5; border: none; padding: 0 15px;}
+.contact-row textarea{ float: left;height: 143px;resize: none; line-height: 20px; padding: 15px;}
+.contact-row input[type="submit"]{ width: 120px; height: 43px; font-size: 15px;line-height: 43px;border-radius:10px; background: #283583; color: #ffffff;font-family:'Gotham Rounded Bold'; font-weight: 700;border: none; cursor: pointer}
+
+.contact-deal{ float: left;width: 100%; font-size: 15px;line-height: 20px; font-family:'Gotham Rounded Book';color: #283583;margin-top:31px;}
+.contact-deal span{ float: left;width: 100%; }
+.contact-deal a{ float: left;width: 100%;display: inline-block;color: #283583;margin-top:9px;}
+.contact-deal:first-child{margin-top:25px;}
+.contact-deal address{float: left; width: 100%; font-size: 15px; line-height: 20px; font-family:'Gotham Rounded Book';color: #283583;font-style: normal;margin-top: 15px;}
+.social-link{ float: left; width: 100%;padding-top: 35px;}
+.social-link a,.link-item a{ float: left; width: auto; clear: both; display: inline-block; color: #283583; font-size: 15px;line-height: 20px; font-family:'Gotham Rounded Book'; margin-top: 20px}
+
+.link-item a{ font-size: 18px;}
+.link-icon{ float: left; width: 37px; }
+.link-icon img{ float: left; width:100%}
+.social-link span,.link-item span{ float: left; padding: 10px 0 0 10px}
+.social-link span:hover,.link-item span:hover{ text-decoration: underline}
+.social-link a:first-child{margin-top: 0px}
+.link-details-wrap{ float: left; width: 100%;margin-top: 19px;}
+.link-item{ float: left; max-width: 365px; width:30.41666666666667%;margin-left:4.375% }
+.link-item:nth-child(3n+1){margin-left:0px}
+.link-feed{ float: left; width: 100%; background: #879DB6; position: relative;margin-top:26px}
+.link-feed img{width: 100%;}
+.link-feed dfn{position: absolute; left: 50%; top: 45%;font-size: 18px; line-height: 20px; color: #fefefe; font-family: 'Gotham Rounded Book'; font-style: normal; width: 100%; margin-left: -50%; text-align: center;}
+/*===============End Contact Page Style==========================*/
+
+/*===============Beginning Product Bed Time Page Style=====================*/
+.product-bed-time-content .aside-nav,.cream-and-lotion .aside-nav{ width: 280px;margin-top: 36px;}
+.product-details-wrap{ float: left; width:calc(100% - 280px);margin-top: 36px;}
+
+.product-banner{ float: left; width: 100%; }
+.product-banner img{ float: left; width: 100%; }
+.product-sub-navigation{ float: left; width: 100%;}
+.product-sub-navigation a{ float: left; width: auto; font-size: 13px;line-height: 20px; color: #283583; font-family:'Gotham Rounded Book';margin-left: 15px; position: relative}
+.product-sub-navigation a:first-child{margin-left: 0px;}
+.product-sub-navigation a:first-child:before{display: none}
+.product-sub-navigation a:before{position: absolute; left:-10px; top: 0; content: '/'; font-size: 13px; line-height: 20px; color: #283583;}
+.product-sub-navigation a:hover,.product-category-nav ul li a:hover{ text-decoration: underline;}
+
+.product-category-nav{ float:left; width: 100%; margin-top:22px;}
+.product-category-nav ul{ list-style: none; margin: 0; padding: 0;}
+.product-category-nav ul li{ float: left; margin-left: 60px; }
+.product-category-nav ul li:first-child{margin-left: 0px;}
+.product-category-nav ul li a{font-size: 15px;line-height: 20px; color: #283583; font-family:'Gotham Rounded Book';}
+.product-category-item-wrap{ float: left; width: 100%;}
+.product-category-item{float: left; max-width: 186px; width: 20.21739130434783%; margin-left:6.376811594202899%;margin-top:24px; text-align: center;}
+.product-category-item:nth-child(4n+1){margin-left: 0px;}
+.product-image{ margin: 0 auto; max-width: 160px; clear: both}
+.product-image img{ float: left; width: 100%;}
+.product-category-item span{ text-align: center;display: inline-block;margin-top:9px; font-size: 14px; line-height: 20px; font-family:'Gotham Rounded Book';color: #283583;}
+.product-category-item-wrap a:hover span{text-decoration: underline}
+
+.product-bed-time-content .aside-nav ul li ul li:first-child,.cream-and-lotion .aside-nav ul li ul li:first-child{ padding-top: 12px;}
+.product-bed-time-content .aside-nav ul li ul li,.cream-and-lotion .aside-nav ul li ul li{padding: 7px 0 3px;}
+/*===============End Product Bed Time Page Style==========================*/
+
+/*===============Beginning Popup Page Style==========================*/
+.popup-section{ float: left; width: 100%; height: 100%; background: rgba(255, 254, 236, .9); position: fixed; left: 0; top: 0; z-index:100;display: none; padding: 25px;}
+.popup-inner{margin: 0 auto; max-width: 938px; width: 100%;/* margin-top: 303px;*/ background: url(../images/pop-up-image.jpg) no-repeat left top; background-size: cover; position: relative; padding: 0px 25px 85px; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%);}
+.popup-inner .contact-row:first-child{margin-top: 0;}
+.popup-inner .contact-row:last-child{width: 100%;}
+.popup-contact-form{margin: 0 auto; max-width: 495px; width: 100%;overflow: hidden}
+.popup-title{ text-align: center; width: 100%; padding-top: 125px;}
+.popup-title h4,.popup-title span{ text-align: center; width: 100%; font-family:'Gotham Rounded Book';color: #283583;}
+.popup-title span{font-size: 14px;line-height: 20px; font-family:'Gotham Rounded Book';color: #283583;padding-top: 14px;display: block; clear: both}
+
+.popup-contact{ float: left; width: 100%; background: rgba(255, 255, 255, 0.5); padding: 30px 63px 25px; margin-top: 23px;}
+.popup-contact .contact-row label{width: 90px; margin-top: 8px;}
+.popup-contact .contact-row input[type="text"]{ width:calc(100% - 90px)}
+.close-btn{ position: absolute; right: 20px; top:20px; width: 28px; height: 25px;z-index:9999; cursor: pointer}
+.close-btn img{float: left; width: 100%;}
+/*===============End Popup Page Style==========================*/
+
+/*==============Beginning Bed Time Cream and oil Page Style==========================*/
+.product-category-row{ float: left; width: 100%;margin-top:66px}
+.cream-and-oil .product-category-row:nth-child(3){margin-top:45px}
+.purity-thumb figure{position: relative; float: left;}
+.purity-thumb figure img{width: 100%;}
+.purity-thumb{float: left; max-width: 306px; width: 100%;}
+.purity-text{ float: left; max-width: 560px; width: calc(100% - 306px); padding-left: 54px;}
+.purity-text p{ float: left; width: 100%; padding-top:14px; font-size: 14px; line-height: 30px;color: #283583; font-family:'Gotham Rounded Book';}
+.purity-text a{ float: left; font-size: 14px; line-height: 20px; color: #283583; font-family:'Gotham Rounded Book';clear: both; margin-top: 21px;text-decoration: underline;-webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.purity-text a:hover{text-decoration: none;-webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.play-btn{ position: absolute; left: 50%; top: 50%; margin-left: -21.5px; margin-top: -18px;width: 43px; height: 44px;z-index: 5; background: url(../images/play-icon.png)no-repeat center top; cursor: pointer;}
+.purity-thumb span{ text-align: center; width: 100%; display: inline-block; font-size: 14px; line-height: 20px; color: #283583; font-family:'Gotham Rounded Book';margin-top:8px; clear: both}
+.suggesst-product-wrap{ float: left; width: 100%;margin-top:46px}
+.suggesst-product-wrap .product-category-item{ max-width: 214px; width: 23.26086956521739%;margin-left:2.318840579710145%;}
+.suggesst-product-wrap .product-category-item:nth-child(4n+1){margin-left:0px}
+.suggesst-product-wrap .product-category-item .product-image{max-width: 214px}
+.suggesst-product-wrap .product-category-item span{max-width: 191px;text-align: center; clear: both}
+
+.aside-nav ul li a,.aside-nav h6{color: #283583;font-family:'Gotham Rounded Bold'; font-weight: 700; position: relative;}
+.aside-nav ul li a{display: inline-block; padding-right: 11px;}
+.aside-nav ul li{font-family:'Gotham Rounded Book'; font-weight: 400; font-style: normal; position: relative;}
+.aside-nav ul li ul{ list-style: none; margin: 0; padding: 0; display: none}
+.aside-nav ul li ul li{ float: left; width: 100%;margin-top: 20px; font-size: 14px;color: #283583; font-family:'Gotham Rounded Book'; font-weight: 400; font-style: normal; font-stretch: normal;}
+.aside-nav ul li ul li a{font-family:'Gotham Rounded Book'; font-weight: 400; font-size: 14px;}
+
+.aside-nav ul li.hasSubnav a:before{position: absolute; width:7px; height:5px; right: 0; top:8px; content: ''; background: url(../images/aside-nav-arrow.png)no-repeat 0 0; opacity: 1;}
+.aside-nav ul li:hover:after{opacity: 1}
+.aside-nav ul li:hover:before,.aside-nav ul li:hover a:before, .aside-nav ul li.active:before..aside-nav ul li.active a:before{opacity: 1}
+.aside-nav ul li.subnavExpanded:hover:before{opacity: 0;}
+.aside-nav ul li.hasSubnav li a:hover{font-family:'Gotham Rounded Book'; font-weight: 400;}
+.aside-nav ul li.hasSubnav li a:before{display: none;}
+/*==============End Bed Time Cream and oil Page Style==========================*/
+
+/*==============Beginning About Page Style==========================*/
+.content-text-wrap{ float: left; width: 100%;margin-top:40px; position: relative}
+.conten-text-info{ float: left; width: calc(100% - 320px);padding-right:93px  }
+.aside-text{ float: left; width: 245px; text-align: center;}
+.title-text p{ float: left; width: 100%; font-size: 14px; line-height: 28px;margin-top:18px;color: #283583;font-family: 'Gotham HTF Book';}
+.about-thumb-wrap{ float: left; width: 100%; margin-top: 38px}
+.about-thumb-item{float: left; max-width: 385px;width:48.91994917407878%;margin-left:2.16010165184244% }
+.about-thumb-item:first-child{margin-left: 0px;}
+
+.row-text{ float: left; width: 100%; margin-top: 16px;}
+.row-text p{ float: left; width: 100%; margin-top:32px;font-family: 'Gotham HTF Book';font-size: 14px; line-height: 28px;color: #283583}
+.connected-info{ float: left; width: 100%; }
+.connected-info h4{  width: 100%; font-size: 25px; text-transform: uppercase;line-height: 30px;  color: #283583;font-family:'Gotham Rounded Book';}
+.fb-icon{clear: both; width: 37px; display: block; padding-top: 15px; margin: 0 auto;}
+.fb-icon a img{ float: left; width: 100%;}
+
+.about-thumb-item h6{ text-align: center; float: none; width: 100%;line-height: 37px;}
+.about-thumb-item figure{float: left; width: 100%; padding-top: 5px;}
+.about-thumb-item figure img{width: 100%;}
+.about-content .row-text p:first-child {margin-top: 40px}
+.about-content{min-height: 1170px;}
+/*==============End About Page Style==========================*/
+
+/*==============Beginning Blog Page Style==========================*/
+.date-of-post{ float: left; width: 100%; padding-top: 3px;}
+.date-of-post > div{ float: left; width: auto;font-size: 12px; line-height: 16px;color: #283583;font-family: 'Gotham HTF Book'; font-style: italic;margin-left: 15px;position: relative;}
+.date-of-post > div:before{ position: absolute; left: -10px; top: 0; content: '/';font-size: 12px; line-height: 16px;color: #283583;z-index: 5;}
+.date-of-post > div:first-child:before{display: none}
+.date-of-post > div:first-child{margin-left: 0px}
+.blog-content .row-text{ margin-top:51px}
+.blog-content .row-text:first-child{ margin-top: 0px}
+.blog-content .row-text:last-child{ margin-top: 60px;}
+.blog-content .row-text p{ margin-top:15px}
+.tag-info{ float: left; width: 100%; text-align: left;}
+.tag-cool{ float: left; width:73%;margin-top: 35px;clear: both}
+.tag-cool a{ float: left; width: auto;margin-right: 6px; display: inline-block;font-size: 16px; line-height: 20px;font-family:'Gotham Rounded Book'; color: #283583;}
+.tag-cool a:hover{text-decoration: underline;}
+.category-info{float: left; width: 100%;margin-top:29px; text-align: left;}
+.category-info ul{ float: left; width: 100%;list-style: none;padding: 0; margin-top: 15px;}
+.category-info ul li{float: left;display: block;clear: both}
+.category-info ul li a{display: inline-block; font-size: 16px; line-height: 20px;font-family:'Gotham Rounded Book'; color: #283583;}
+.category-info ul li a:hover{text-decoration: underline;}
+.blog-content .connected-info{ margin-top: 47px}
+/*==============End Blog  Page Style==========================*/
+
+/*==============Beginning Pregnancy Page Style==========================*/
+.pregnancy-content .aside-nav ul li{ width: 204px;}
+.pregnancey-details-text{float: left; width: calc(100% - 280px);padding-right: 23px;padding-left: 5px; padding-top: 3px;}
+.aside-right{ float: left; width: 280px;}
+.pregnancy-thumb{ float: left; width: 100%; position: relative;}
+.pregnancy-thumb img{ float: left; width: 100%;}
+
+
+.pregnancy-content .product-details-wrap{ width: calc(100% - 300px)}
+.pregnancy-content .product-details-wrap .product-sub-navigation{ margin-top:16px}
+.pregnancy-content .product-details-wrap .row-text{ margin-top: 56px}
+.pregnancy-content .product-details-wrap .row-text p{ margin-top:15px;max-width: 489px}
+
+.brest-feeding{ float: left; width: 100%; }
+.brest-feeding h6,.related-products h6{color: #283583;font-family:'Gotham Rounded Bold'; font-weight: 700; }
+.brest-feeding figure,.brest-feeding span{ margin-top:18px; }
+.brest-feeding figure img{width: 100%;}
+.pregnancy-thumb h4{ position: absolute; left: 74px; bottom:57px; z-index: 2; width: 100%;}
+.pregnancy-thumb h4 a:hover{text-decoration: underline;}
+.pregnancy-product-features{ float: left;width: 457px;margin-top: 36px;}
+
+.features-thumb{ margin: 0 auto; width: 145px; clear: both}
+.features-thumb img{float: left; width: 100%;}
+.features-thumb span,.brest-feeding span,.related-thumb-wrap span{ text-align: center; width: 100%; display: inline-block; font-size: 14px; line-height: 20px; font-family:'Gotham Rounded Book'; color: #283583;margin-top: 20px }
+.features-thumb span{margin-top: 18px;}
+
+.pregnancy-features-list{ float: left; width: 100%; margin-top:44px;}
+.pregnancy-features-list ul{ list-style: none; margin: 0; padding: 0;}
+.pregnancy-features-list ul li{ float: left; width: 100%;font-size: 14px;line-height: 20px; margin-top: 5px;position: relative; padding-left: 20px;font-family:'Gotham Rounded Book'; color: #283583;}
+.pregnancy-features-list ul li:first-child{margin-top: 0px}
+.pregnancy-features-list ul li:before{ position: absolute; left: 0; top: 6px; content: ''; width: 7px; height: 7px; background: #0044A2; border-radius: 100%;}
+
+.read-text{ float: left; width: 316px; margin-top:45px;}
+.read-text a{ margin-top:15px}
+.read-text a,.read-text span{ float: left; width: auto; font-size: 14px; line-height: 20px;font-family:'Gotham Rounded Book'; color: #283583;}
+.read-text a:hover{text-decoration: underline;}
+.read-text span{ float: left; margin-left: 14px;display: inline-block; width: 215px; padding: 6px 16px 6px 13px;border-radius: 5px;border: 1px solid #2E3192;}
+.related-products{float: left; width: 100%;padding-top:57px;}
+
+.related-thumb-wrap{ float:left; width: 100%; margin-top: 18px;}
+.related-thumb-wrap:nth-child(2){margin-top: 30px;}
+.related-thumb-wrap span{ float:left; width: 100%; margin-top: 36px;}
+.related-thumb-wrap:first-child{margin-top:55px;}
+.related-thumb{ margin: 0 auto; width: 73px; clear: both}
+.related-thumb img{ float:left; width: 100%;}
+a.related-thumb-wrap:hover span {text-decoration: underline;}
+
+.related-products h6{ text-align: center;float: none;}
+.banner-caption a{font-size: 24px; position: relative; margin-left: 25px;}
+.banner-caption a:after{position: absolute; left: -20px; top: 0; content: '/';font-size: 24px;line-height: 30px; z-index: 2;color: #283583;}
+.banner-caption a:first-child{margin-left: 0;}
+.banner-caption a:first-child:after{display: none}
+.slider-caption a:hover, .banner-caption a:hover{text-decoration: underline;}
+.slide-title .slider-caption{left: 73px;bottom: 54px;}
+
+/*==============Beginning Pregnancy Page Style==========================*/
+.about-content .content-star{ bottom: -164px} 
+.cream-and-lotion .content-star,.product-bed-time-content .content-star,.blog-content .content-star,.community-content .content-star,.faq-content .content-star,.pregnancy-content .content-star,.product-bed-time-content .content-star{ bottom: 0; top: 0;}
+.faq-content .content-star{top: -30px}
+.pregnancy-content .content-star,.cream-and-lotion .content-star,.product-bed-time-content .content-star{ top: -20px}
+.community-content .content-star,.blog-content .content-star{top: -21px;}
+.cream-and-lotion .aside-nav,.product-bed-time-content .aside-nav,.cream-and-lotion .product-details-wrap,.product-bed-time-content .product-details-wrap,.pregnancy-content .aside-nav,.pregnancy-content .product-details-wrap{margin-top: 0px}
+.cream-and-lotion{min-height: 834px;}
+.cream-and-lotion .product-details-wrap .product-category-row:nth-child(3){margin-top: 40px;}
+.cream-and-lotion .product-details-wrap .product-category-row:nth-child(4) .purity-text h6{line-height:16px}
+.cream-and-oil{min-height:1157px}
+.product-bed-time-content .product-sub-navigation{margin-top: 19px;}
+
+.product-bed-time-content .product-category-item{margin-top: 51px}
+.product-bed-time-content .product-category-item span{margin-top:14px}
+.product-bed-time-content{min-height:1191px;}
+.blog-content .conten-text-info{width: calc(100% - 385px);padding-right: 35px;}
+.blog-content .aside-text{width:385px;}
+.blog-content .aside-text .connected-info h4{text-align: center; margin-left: 0;}
+.blog-content .aside-text .connected-info .fb-icon{float: none; margin: 0 auto; clear: both}
+.blog-content {min-height:1168px}
+
+.community-content .link-item span{margin-left: 10px}
+.community-content{min-height: 1060px;}
+.contact-content{min-height:946px;}
+.pregnancy-content .aside-nav ul{ clear: both; padding-top:25px; width: 100%;}
+.pregnancy-content .aside-nav ul li{ width: 230px;}
+.pregnancy-content .aside-nav ul li:first-child{ padding-top: 5px;}
+.pregnancy-content .aside-nav ul li ul{ padding-top: 7px}
+.aside-nav ul li ul li{padding: 16px 0 4px; margin: 0;}
+.pregnancy-content .aside-nav ul li ul li:first-child{padding-top: 0px}
+.pregnancy-content .aside-nav ul li a:after{right: -11px;}
+
+.brest-feeding span{margin-top: 15px}
+.related-thumb-wrap span{margin-top: 13px}
+.pregnancy-content{min-height:1189px}
+.article-item h6,.video-item-wrap h6{text-align: center;float: none}
+.faq-content{min-height: 1059px}
+.faq-content .aside-nav{margin-top: 25px;}
+.faq-content .aside-nav ul li{padding: 10px 0; cursor: pointer;}
+.faq-content .aside-nav ul li:first-child{padding-top: 0px;}
+.faq-content .aside-nav ul li a:before{bottom: -9px}
+.faq-content .slide-title .slider-caption{left: 42px}
+
+.community-content .slide-title .slider-caption{left: 40px}
+.cream-and-lotion .product-category-item-wrap .product-category-item{margin-top: 43px}
+.cream-and-oil .product-sub-navigation{margin-top: 0px}
+.cream-and-oil .suggesst-product-wrap .product-category-item-wrap .product-category-item{margin-top: 23px}
+.cream-and-oil{min-height: 1145px}
+
+.contact-content .content-star { left: -22px; right: 0; bottom: 0; z-index: -99; top: -20px;}
+.home-content{min-height: 1160px}
+.home-content-body .footer-upper-section{margin-top: 2px}
+.brand-item-wrap figure{float: none}
+.brand-item-wrap figure img{width: 100%;}
+/*============== //End Pregnancy Page Style==========================*/
+
+.cream-and-lotion .product-category-item-wrap{margin-left: 25px;}
+.cream-and-lotion .product-category-item-wrap .product-category-item{margin-top: 50px;}
+
+
+
+.main-footer-section{background: url(../images/footer-bg.png) no-repeat center top; background-size: cover; position: relative; padding-bottom: 47px; margin-top: 15px;}
+
+.footer-upper-section{float: right; width: 100%;}
+.footer-logo{float: right; width: 173px; margin-top: 80px;}
+.footer-logo img{width: 100%;}
+.home-content-body .footer-logo{margin-top: 60px;}
+.footer-upper-nav{float: right; width: 100%; padding-top: 8px;} 
+.home-content-body .footer-upper-nav{padding-top: 5px;} 
+.footer-upper-nav ul{text-align: right;}
+.footer-upper-nav li,.footer-lower-section li{display: inline-block; padding: 0 4px 0 0px; border-right: 1px solid #283583; font-size: 13px; line-height: 12px;}
+.footer-lower-section li{padding: 0 5px 0 2px;}
+.footer-upper-nav li a:before, .footer-lower-section li:before{display: block; bottom: -1px; height: 0; visibility: hidden; font-family:'Gotham Rounded Bold'; font-weight: 700; content: attr(title);}
+.footer-upper-nav li a:hover, .footer-lower-section li:hover a{font-family:'Gotham Rounded Bold'; font-weight: 700;}
+.footer-lower-section{float: left; width: 100%; border-top: 1px solid #283583; padding: 8px 0; margin-top: 6px;}
+.footer-lower-section ul{text-align: left;}
+.footer-lower-section li{text-transform: uppercase;}
+.footer-lower-section li:last-child, .footer-upper-nav li:last-child{border-right: 0; padding-right: 0;}
+.footer-lower-section li:first-child{padding-left: 0;}
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    h3{font-size: 18px; line-height: 22px;}
+    h6{font-size: 16px;}
+    .main-header{position: fixed; left: 0; top: -1px; margin-top: 1px; z-index: 999; background: url(../images/body-bg.jpg) no-repeat 0 0;}
+    .phone-nav{display: block;}
+    .logo-wrap{padding: 0 15px;}
+    .logo{width: 120px; padding: 5px 0;}
+    .logo a{display: block;}
+    
+    
+    .hearder-star{height: 95px; overflow: hidden;}
+    .main-nav{padding: 25px 15px 20px; display: none; border-bottom: 1px solid #283583; max-height: 467px; overflow-y: auto;}
+    .safari .main-nav ul li,.main-nav ul li{width: 100%; margin: 0; text-align: center;}
+    .main-nav ul li a{padding: 7px 0;}
+    .main-nav ul li a:after,.main-nav ul li:hover a:after,.main-nav ul li.current-menu-item a:after{opacity: 0;}
+
+    .main-nav ul li.hasSubnav a:hover:after{bottom: 14px; left: auto; right: -20px;}
+    .main-nav ul li.hasSubnav a:after{opacity: 1; bottom: 14px; left: auto; right: -20px; width: 10px; height: 6px; background-size: contain;}
+    .main-nav ul li.hasSubnav.subnavExpanded a:after{bottom: -9px; left: 50%; right: auto;}
+    .main-nav ul li.current-menu-item a:after, .main-nav ul li:hover a:after{bottom: 14px; left: auto; right: -20px; }
+    .dropdown-item-wrap{position: relative; left: auto; top: auto; margin-top: 20px; padding-top: 15px; padding-bottom: 10px; display: none;}
+    .dropdown-item-wrap ul,.dropdown-item-wrap ul:nth-child(2){width: 100%; padding: 0; margin: 0;}
+    .dropdown-item-wrap ul li{padding: 0;}
+    .main-nav ul li .dropdown-item-wrap ul li a{font-size: 13px; line-height: 16px;}
+    
+    .header-right {top: auto; position: relative; right: auto; float: none; margin: 0 auto; clear: both;}
+    .social-icon-wrap{float: none; margin: 0 auto; clear: both; padding-top: 15px;}
+    .search-box-area{width: 100%; margin: 0; padding-top: 10px;}
+    
+    .main-content-section{padding-top: 63px;}
+    .hearder-star{height: 63px; overflow: hidden;}
+    
+    .flex-control-nav,.flex-direction-nav{display: none;}
+    .slider-caption{bottom: auto; top: 50%; left: 50%; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); transform: translate(-50%,-50%); width: 100%; max-width: 250px;}
+    
+    .read-more{margin-top: 5px; font-size: 12px;}
+
+    .home-content-body .slider-caption a.read-more{margin-top: 5px; font-size: 12px;}
+    .home-content-body .slider-caption a:after{display: none}
+    
+    .brand-item figure{float: none;}
+    .brand-item{ float: none; width: 100%; margin: 0 auto;}
+    h2{font-size: 24px;line-height: 30px}
+    .video-item-wrap, .article-item{width: 100%; margin: 0;}
+    .video-item-wrap{padding-top: 29px}
+    .main-footer-section{padding-bottom: 21px;margin-top: 0px}
+    .main-footer-section .common-wrap{padding: 0 15px}
+    .aside-nav{ width: 100%;}
+    .pregnancy-content .aside-nav ul li{width: 100%;}
+    
+    .cream-and-lotion .aside-nav, .product-bed-time-content .aside-nav, .cream-and-lotion .product-details-wrap, .product-bed-time-content .product-details-wrap, .pregnancy-content .aside-nav, .pregnancy-content .product-details-wrap,.aside-nav{width: 100%; padding-top: 30px;}
+    .pregnancey-details-text{width: 100%; padding: 0;margin-top: 30px}
+    .pregnancy-content .product-details-wrap .row-text{margin-top: 37px}
+    h4{font-size: 18px}
+    .pregnancy-product-features{width: 100%;}
+    .aside-right{ float: none; margin: 0 auto;clear: both;padding-top: 30px}
+    .brest-feeding h6{ text-align: center; float: none}
+    .read-text{ width: 100%;margin-top: 30px;}
+    
+    section h2{padding-top: 25px;}
+    .video-wrap{float: none; max-width: 385px; margin: 0 auto; clear: both;}
+    
+    .banner-caption{left: 15px; bottom: 15px;}
+    .banner-caption a{font-size: 16px;}
+    .conten-text-info{width: 100%; padding: 0;}
+    .title-text p{line-height: 24px; padding-top: 10px;}
+    .content-text-wrap,.row-text{margin-top: 30px;}
+    .about-thumb-wrap{margin-top: 0px;}
+    .about-thumb-item,.about-thumb-item:first-child{width: 100%; margin: 30px auto 0; float: none; clear: both; overflow: hidden;}
+    .about-content .row-text p:first-child{margin-top: 0px;}
+    .row-text p{margin-top: 15px;}
+    .aside-text{margin-top: 30px; width: 100%;}
+    .connected-info{float: none; margin: 0 auto 0; clear: both; overflow: hidden;}
+    .connected-info h4{font-size: 20px;}
+    
+    .product-category-nav ul li{margin-left: 15px;}
+    .product-category-nav ul li a{font-size: 12px;}
+    
+    .cream-and-oil .product-category-row:nth-child(3){margin-top: 35px;}
+    .purity-thumb{float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .purity-text{width: 100%; padding: 30px 0 0; max-width: 100%;}
+    
+    .product-category-row{margin-top: 30px;}
+    .cream-and-oil .product-category-row:nth-child(4) .purity-thumb{float: left;}
+    .cream-and-oil .product-category-row:nth-child(4) .purity-thumb span{text-align: left;}
+    
+    .suggesst-product-wrap .product-category-item{width: 100%; float: none; margin: 25px auto 0; vertical-align: top;}
+    .product-category-item-wrap{text-align: center;}
+    
+    .cream-and-lotion .product-category-item-wrap{margin-left: 0;}
+    .product-category-item{width: 100%; float: none; margin: 30px auto 0;}
+    
+    .tab-contents{width: 100%; padding: 30px 0 0;}
+    .faq-subTab li{/*width: 100%;*/ margin: 8px 6px; text-align: center;}
+    .faq-subTab li:last-child{margin-right: 0;}
+    .question h6{background-position: right 16px;}
+    
+    .faq-content-details{padding-top: 30px;}
+    .faq-content .aside-nav,.faq-subTab{margin-top: 0;}
+    
+    .main-content-section{min-height: 700px !important;}
+    
+    .contact-info-wrap{width: 100%; margin-top: 20px;}
+    .contact-row label,.contact-row input[type="text"], .contact-row textarea{width: 100%;}
+    .contact-row input[type="text"], .contact-row textarea{margin-top: 10px;}
+    .contact-row input[type="text"]{height: 37px; line-height: 37px;}
+    
+    .contact-address-wrap{width: 100%; margin-left: 0;}
+    .contact-deal:first-child,.contact-details-wrap{margin-top: 30px;}
+    .contact-row:last-child,.blog-content .aside-text{width: 100%;}
+    
+    .blog-content .conten-text-info{width: 100%; padding: 0;}
+    .blog-content .row-text,.blog-content .row-text:last-child{ margin-top: 30px; }
+    .blog-content .connected-info{margin-top: 0; padding-top: 30px;}
+    
+    .link-details-wrap{margin-top: 0;}
+    .link-item,.link-item:nth-child(3n+1){width: 100%; float: none; margin: 20px auto 0; clear: both; overflow: hidden;}
+    
+    .popup-section{margin-top: 62px; position: absolute;}
+    .popup-title{padding-top: 100px;}
+    .popup-inner{padding-bottom: 50px; top: 30px; -webkit-transform: translateY(0); -mow-transform: translateY(0); transform: translateY(0);}
+    .popup-contact .contact-row label,.popup-contact .contact-row input[type="text"]{width: 100%;}
+    .popup-contact{padding: 30px 25px 25px;}
+    
+
+    
+    .footer-logo{width: 140px;}
+    .footer-lower-section li{font-size: 12px;}
+    
+
+
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .product-category-nav ul li{width: 100%; text-align: center; margin: 0;}
+    .product-category-nav ul li a{display: inline-block;}
+    .main-content-section{padding-right: 15px; padding-left: 15px;}
+    .faq-subTab li{margin: 8px 4px;}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .main-nav{max-height: 240px; overflow-y: auto;}
+    .product-category-item{max-width: 250px; padding: 0 15px;}
+
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    h3{font-size: 20px; line-height: 25px;}
+    h4{font-size: 22px;}
+    h6{font-size: 16px; line-height: 20px;}
+    .main-nav{padding: 25px 0 20px; display: none; border-bottom: 1px solid #283583; max-height: 605px; overflow-y: auto;}
+    .safari .main-nav ul li,.main-nav ul li{width: 100%; margin: 0; text-align: center;}
+    .main-nav ul li a{padding: 7px 0; font-size: 20px; line-height: 30px;}
+    .main-nav ul li a:after,.main-nav ul li:hover a:after,.main-nav ul li.current-menu-item a:after{opacity: 0;}
+    
+    .main-nav ul li.hasSubnav a:hover:after{bottom: 18px; left: auto; right: -20px;}
+    .main-nav ul li.hasSubnav a:after{opacity: 1; bottom: 18px; left: auto; right: -20px;}
+    .main-nav ul li.hasSubnav.subnavExpanded a:after{bottom: -9px; left: 50%; right: auto;}
+    .main-nav ul li.current-menu-item a:after, .main-nav ul li:hover a:after{bottom: 18px; left: auto; right: -20px; }
+    .dropdown-item-wrap{position: relative; left: auto; top: auto; margin-top: 20px; padding-top: 25px; padding-bottom: 20px; display: none;}
+    .dropdown-item-wrap ul,.dropdown-item-wrap ul:nth-child(2){width: 100%; padding: 0; margin: 0;}
+    .dropdown-item-wrap ul li{padding: 0;}
+    .main-nav ul li .dropdown-item-wrap ul li a{font-size: 16px;}
+    
+    
+    .header-right {top: auto; position: relative; right: auto; float: none; margin: 0 auto; clear: both;}
+    .social-icon-wrap{float: none; margin: 0 auto; clear: both; padding-top: 15px;}
+    .search-box-area{width: 100%; margin: 0; padding-top: 10px;}
+    .home-content-body  .main-content-section{padding-top: 96px}
+    .search-box-area input[type="text"]{font-size: 24px; height: 50px;}
+    .search-box-area{padding-top: 16px}
+    
+    .play-video-section, .popular-article-section{padding: 0 15px}
+    .video-item-wrap:nth-child(2n+1), .article-item:nth-child(2n+1){margin-left: 0px}
+    .main-footer-section .common-wrap{padding: 0 15px}
+        
+    .main-header{position: fixed; left: 0; top: -1px; margin-top: 1px; z-index: 999; background: url(../images/body-bg.jpg) no-repeat 0 0;}
+    .phone-nav{display: block;top: 36px}
+    .logo-wrap{padding: 0 15px;}
+    .logo{width: 150px; padding: 15px 0;}
+    .logo a{display: block;}
+
+    .main-content-section{padding-top: 96px;}
+    .video-item-wrap{padding-top: 50px;}
+    .signup-newslater input[type="text"],.signup-newslater input[type="submit"]{margin-top: 10px; height: 30px;}
+    .signup-newslater input[type="submit"]{line-height: 30px; font-size: 13px;}
+    .signup-newslater { padding: 25px 20px 20px;}
+    
+    .conten-text-info{width: calc(100% - 245px); padding-right: 30px;}
+    .main-content-section{min-height: 735px !important;}
+    
+    .aside-nav{width: 240px; padding-right: 15px;}
+    .pregnancy-content .product-details-wrap,.tab-contents{width: calc(100% - 240px);}
+    .aside-right{float: left; width: 100%; padding-top: 50px;}
+    .pregnancey-details-text{width: 100%; padding: 0;}
+    .row-text h4{font-size: 20px;}
+    .pregnancy-thumb h4{left: 35px; bottom: 35px;}
+    .pregnancy-content .product-details-wrap .row-text{margin-top: 40px;}
+    
+    .cream-and-oil{min-height: 500px;}
+    .product-category-nav ul li{margin-left: 25px;}
+    .purity-text{width: 100%; max-width: 100%; padding: 30px 0 0;}
+    .purity-thumb span{text-align: left;}
+    .product-category-row{margin-top: 40px;}
+    
+    .main-content-section{padding-top: 120px;}
+    .cream-and-lotion .product-category-item-wrap{margin-left: 0;}
+    .cream-and-lotion .product-category-item-wrap .product-category-item{width: 23.26086956521739%;}
+    
+    .hearder-star{height: 96px; overflow: hidden;}
+    
+    .product-bed-time-content .aside-nav, .cream-and-lotion .aside-nav{width: 170px;}
+    .product-bed-time-content .product-details-wrap, .cream-and-lotion .product-details-wrap{width: calc(100% - 170px);}
+    
+    .contact-info-wrap{width: 60%;}
+    .contact-address-wrap{width: 36%; margin-left: 4%;}
+    
+    .contact-deal address br{display: none;}
+    .community-content .link-item span{font-size: 12px; margin-left: 0;}
+    .link-feed dfn{font-size: 15px;}
+    
+    .blog-content .aside-text{width: 245px;}
+    .blog-content .conten-text-info{width: calc(100% - 245px)}
+    
+    .aside-nav ul{width: 100%;}
+    .aside-nav ul li:before{width: calc(100% - 25px);}
+    
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+	
+    .main-header .common-wrap{padding: 0 25px}
+    .safari .main-nav ul li{margin: 0 13px}
+    .signup-newslater input[type="submit"]{margin-top: 27px}
+    .signup-newslater input[type="text"]{margin-top:23px }
+    .play-video-section,.popular-article-section{padding: 0 15px}
+    .main-footer-section .common-wrap{padding: 0 15px}
+    
+    .main-nav ul li{margin: 0 16.8px;}
+    .about-content{min-height: 600px}
+    .about-content .content-star{bottom: -125px;}
+    
+    .signup-newslater{padding: 30px 20px 20px;}
+    .signup-newslater input[type="text"]{ margin-top: 20px; }
+    .signup-newslater input[type="submit"]{ margin-top: 25px;}
+
+    .aside-nav{width: 240px;}
+    .pregnancy-content .product-details-wrap{width: calc(100% - 240px);}
+    .aside-right{width: 245px;}
+    .pregnancey-details-text{width: calc(100% - 245px);}
+    .pregnancy-thumb h4{left: 35px; bottom: 35px;}
+    
+    .main-content-section{min-height: 435px !important;}
+    .community-content .link-item span{margin-left: 0; font-size: 16px;}
+    
+
+    .main-nav{display: block !important;}
+
+}
+
+
+
+
+
+
+
+
+
